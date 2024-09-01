@@ -1,5 +1,6 @@
 import React from 'react';
-import ProjectManagementAssistant from '@/components/ProjectManagementAssistant';
+// Update the import path to match your project structure
+import ProjectManagementAssistant from '../components/ProjectManagementAssistant';
 
 export default function Home() {
   return (
