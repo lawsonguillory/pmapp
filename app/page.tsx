@@ -1,11 +1,9 @@
-import React from 'react';
-// Update the import path to match your project structure
-import ProjectManagementAssistant from '../components/ProjectManagementAssistant';
+import ProjectManagementAssistant from '@/components/ProjectManagementAssistant'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-center p-24">
       <ProjectManagementAssistant />
     </main>
-  );
+  )
 }
