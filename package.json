@@ -8,6 +8,5 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
-    // ... other dependencies
   }
 }
