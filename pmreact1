@@ -60,4 +60,10 @@ const ProjectManagementAssistant = () => {
   );
 };
 
+import React from 'react';
+
+const ProjectManagementAssistant = () => {
+  // ... (previous component code)
+};
+
 export default ProjectManagementAssistant;
