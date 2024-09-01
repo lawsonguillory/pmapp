@@ -3,9 +3,15 @@ import { Card, CardHeader, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 
-const ProjectManagementAssistant = () => {
-  const [tasks, setTasks] = useState([]);
-  const [newTask, setNewTask] = useState('');
+interface Task {
+  id: number;
+  text: string;
+  completed: boolean;
+}
+
+const ProjectManagementAssistant: React.FC = () => {
+  const [tasks, setTasks] = useState<Task[]>([]);
+  const [newTask, setNewTask] = useState<string>('');
 
   const addTask = () => {
     if (newTask.trim() !== '') {
@@ -14,7 +20,7 @@ const ProjectManagementAssistant = () => {
     }
   };
 
-  const toggleTask = (id) => {
+  const toggleTask = (id: number) => {
     setTasks(tasks.map(task => 
       task.id === id ? { ...task, completed: !task.completed } : task
     ));
@@ -31,14 +37,14 @@ const ProjectManagementAssistant = () => {
             <Input
               type="text"
               value={newTask}
-              onChange={(e) => setNewTask(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTask(e.target.value)}
               placeholder="Enter a new task"
               className="mr-2"
             />
             <Button onClick={addTask}>Add Task</Button>
           </div>
           <ul>
-            {tasks.map(task => (
+            {tasks.map((task: Task) => (
               <li key={task.id} className="mb-2">
                 <label className="flex items-center">
                   <input
